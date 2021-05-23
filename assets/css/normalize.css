@@ -463,14 +463,18 @@ th {
   background-color: greenyellow;
 }
 .success {
+  color:white;
+  width:150px;
   background-color: green;
 }
 .warning {
   background-color: orange;
+  width:150px;
 }
 .danger {
-  background-color: red;
-  width: 100px;
+  background-color: rgba(255, 0, 0, 0.767);
+  width: 150px;
+  color:white
 }
 .current-date {
   font-family: arial;
@@ -487,3 +491,9 @@ th {
 #history ul {
   list-style: none;
 }
+#current-icon {
+  background-color: darkgray;
+  border-radius: 50%;
+  float:right;
+  margin-right: 20px;
+  }
