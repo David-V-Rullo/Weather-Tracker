@@ -90,12 +90,13 @@ function fiveDayFore(data) {
 // // Get history from local storage if any
 searchEl.on("click", function(e) {
   const searchTerm = cityEl.val();
-  console.log(e)
-  console.log(searchTerm)
+    if (searchTerm === null){
+       return alert("Please Enter a Valid City") 
+    }
   getWeather(searchTerm);
   searchHistory.push(searchTerm);
   localStorage.setItem("search", JSON.stringify(searchHistory));
-//   renderSearchHistory();
+  renderSearchHistory();
 });
 
 function renderSearchHistory() {

@@ -438,7 +438,10 @@ th {
   background-color: #ccc;
   margin-left: 10px;
   margin-right: 10px;
-  padding:10px
+  padding:10px;
+  justify-content: right;
+  display: block;
+  position:static
 }
 .weather.card h5 {
   text-align: center;
@@ -458,6 +461,9 @@ th {
   padding-top: 80px;
   padding-left:20px;
   color:white;
+}
+#city-search {
+  color:black;
 }
 #search-submit {
   background-color: greenyellow;
@@ -484,11 +490,14 @@ th {
   color:white;
   margin-left:20px
 }
-#history button {
+#history input {
   background-color: grey;
   color:white;
+  text-align: center;
+  width: fit-content;
+  margin: auto
 }
-#history ul {
+#history {
   list-style: none;
 }
 #current-icon {
