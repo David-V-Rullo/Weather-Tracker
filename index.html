@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta charset="utf-8" />
+    <title>Your page title here :)</title>
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+
+    <!-- Mobile Specific Metas
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FONT
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link
+      href="//fonts.googleapis.com/css?family=Raleway:400,300,600"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- CSS
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/skeleton.css" />
+    <!-- <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css"
+    /> -->
+    <!-- Favicon
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </head>
+  <body>
+    <!-- Primary Page Layout
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+    <div class="container">
+      <div class="row" id="jumbotron">
+          <h1 class="hero-heading">Weather Tracking Dashboard</h1>
+        </div>
+      </div>
+      <div class="row">
+        <div class="two columns" id="search-fields">
+          <h5>Search for a City:&nbsp;</h5>
+          <div>
+            <input
+              id="city-search"
+              type="text"
+              class="form-control"
+              placeholder="City Name"
+            />
+          </div>
+          <div>
+            <input type="submit" value="search" id="search-submit" />
+          </div>
+        </div>
+        <div class="eight columns" id="search-output">
+            <h3 id="searched-city">City<span class="current-date">Date<span id="current-icon"><img src=""></span>
+            </h3>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="two columns" id="history">
+          <ul>
+            <li>Previous Searches</li>
+            <li>
+              <button>Search Result</button>
+            </li>
+            <li>
+              <button>Search Result</button>
+            </li>
+            <li>
+              <button>Search Result</button>
+            </li>
+          </ul>
+          
+        </div>
+          <h3>5-Day Forecast</h3>
+          <div class="two columns weather card" id="date-plus-one">
+            <h5>Date</h5>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+          </div>
+          <div class="two columns weather card" id="date-plus-two">
+            <h5>Date</h5>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+          </div>
+          <div class="two columns weather card" id="date-plus-three">
+            <h5>Date</h5>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+          </div>
+          <div class="two columns weather card" id="date-plus-four">
+            <h5>Date</h5>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+          </div>
+          <div class="two columns weather card" id="date-plus-five">
+            <h5>Date</h5>
+            <p id="temp">Temp</p>
+            <p id="wind">Wind</p>
+            <p id="humid">Humidity</p>
+            <p id="uv-index">UV Index</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.js"
+      integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.js"></script>
+    <script src="assets/js/script.js"></script>
+    <!-- End Document
+  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  </body>
+</html>
