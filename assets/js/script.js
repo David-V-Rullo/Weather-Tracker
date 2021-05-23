@@ -103,8 +103,6 @@ function renderSearchHistory() {
   for (let i = 0; i < searchHistory.length; i++) {
     const historyItem = document.createElement("input");
     historyItem.setAttribute("type", "text");
-    historyItem.setAttribute("readonly", true);
-    historyItem.setAttribute("class", "form-control d-block bg-white");
     historyItem.setAttribute("value", searchHistory[i]);
     historyItem.addEventListener("click", function () {
       getWeather(historyItem.value);
@@ -112,7 +110,3 @@ function renderSearchHistory() {
     historyEl.append(historyItem);
   }
 }
-
-// renderSearchHistory();
-// if (searchHistory.length > 0) {
-//   getWeather(searchHistory[searchHistory.length - 1
