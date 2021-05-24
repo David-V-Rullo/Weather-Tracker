@@ -1,7 +1,7 @@
 const cityEl = $("#city-search");
 const dateEl = $("#current-date");
 const searchEl = $("#search-submit");
-// const clearEl = document.getElementById("clear-history");
+const clearEl = $("#clear-history");
 const nameEl = $("#searched-city");
 const currentIconEl = $("#current-icon");
 const currentTempEl = $("#temp");
@@ -9,8 +9,6 @@ const currentHumidityEl = $("#humid");
 const currentWindEl = $("#wind");
 const currentUVEl = $("#uv-index");
 const historyEl = $("#history");
-// var fivedayEl = document.getElementById("fiveday-header");
-// var todayweatherEl = document.getElementById("today-weather");
 let searchHistory = JSON.parse(localStorage.getItem("search")) || [];
 
 // Assigning a unique API to a variable
@@ -81,16 +79,27 @@ function fiveDayFore(data) {
       return fiveDay.json();
     })
     .then(function (fiveDay) {
-      console.log(fiveDay);
-      $(".weather.card").each(function (fiveDay){
-
-      })
-    });
+     console.log(fiveDay);
+     var cardArray =  $(".weather.card").toArray()
+     console.log(cardArray)
+     
+     for (i=0; i < cardArray.length; i++){
+        var cardDate = new Date(fiveDay.list[i].dt * 1000);
+        var day = cardDate.getDate();
+        var month = cardDate.getMonth() + 1;
+        var year = cardDate.getFullYear(); 
+       $(cardArray[i]).children(0).text(`${month}/${day}/${year}`)
+       $(cardArray[i]).children("#temp").text(`Temp: ${fiveDay.list[i].main.temp}`)
+       $(cardArray[i]).children("#wind").text(`Wind: ${fiveDay.list[i].wind.speed}`)
+       $(cardArray[i]).children("#humid").text(`Humidity: ${fiveDay.list[i].main.humidity}`)
+     }
+})
 }
+
 // // Get history from local storage if any
 searchEl.on("click", function(e) {
   const searchTerm = cityEl.val();
-    if (searchTerm === null){
+    if (!searchTerm){
        return alert("Please Enter a Valid City") 
     }
   getWeather(searchTerm);
@@ -98,9 +107,15 @@ searchEl.on("click", function(e) {
   localStorage.setItem("search", JSON.stringify(searchHistory));
   renderSearchHistory();
 });
+clearEl.on("click", function(e){
+    localStorage.clear();
+    console.log(e)
+    searchHistory = []
+    renderSearchHistory()
+})
 
 function renderSearchHistory() {
-  historyEl.innerHTML = "";
+  historyEl.empty()
   for (let i = 0; i < searchHistory.length; i++) {
     const historyItem = document.createElement("input");
     historyItem.setAttribute("type", "text");
@@ -111,3 +126,4 @@ function renderSearchHistory() {
     historyEl.append(historyItem);
   }
 }
+renderSearchHistory()

@@ -27,13 +27,10 @@
    
   </head>
   <body>
+
     <!-- Primary Page Layout
-  –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+  –––––––––––––––––––––––––––––––––––––––––––––––––– --><header class="jumbotron"><h1 class="hero-heading">Weather Dashboard</h1></header>
     <div class="container">
-      <div class="row" id="jumbotron">
-          <h1 class="hero-heading">Weather Tracking Dashboard</h1>
-        </div>
-      </div>
       <div class="row">
         <div class="two columns" id="search-fields">
           <h5>Search for a City:&nbsp;</h5>
@@ -47,6 +44,7 @@
           </div>
           <div>
             <input type="submit" value="search" id="search-submit" />
+            <input type="submit" value="Clear History" id="clear-history"/>
           </div>
         </div>
         <div class="eight columns" id="search-output">
@@ -61,47 +59,42 @@
       </div>
       <div class="row">
         <div class="three columns">
-          <ul id="history">
-            <li>Previous</li>
-          </ul>
+          <div id="history"></div>
           
         </div>
-          <h3>5-Day Forecast</h3>
-          <div class="two columns weather card" id="date-plus-one">
+          <h3 id="five-day-header">5-Day Forecast</h3>
+          <div id="weather-cards">
+           <div class="two columns weather card" id="date-plus-one">
             <h5>Date</h5>
             <p id="temp">Temp</p>
             <p id="wind">Wind</p>
             <p id="humid">Humidity</p>
-            <p id="uv-index">UV Index</p>
-          </div>
-          <div class="two columns weather card" id="date-plus-two">
+            </div>
+            <div class="two columns weather card" id="date-plus-two">
             <h5>Date</h5>
             <p id="temp">Temp</p>
             <p id="wind">Wind</p>
             <p id="humid">Humidity</p>
-            <p id="uv-index">UV Index</p>
           </div>
-          <div class="two columns weather card" id="date-plus-three">
+           <div class="two columns weather card"   id="date-plus-three">
             <h5>Date</h5>
             <p id="temp">Temp</p>
             <p id="wind">Wind</p>
             <p id="humid">Humidity</p>
-            <p id="uv-index">UV Index</p>
-          </div>
-          <div class="two columns weather card" id="date-plus-four">
+           </div>
+            <div class="two columns weather card" id="date-plus-four">
             <h5>Date</h5>
             <p id="temp">Temp</p>
             <p id="wind">Wind</p>
             <p id="humid">Humidity</p>
-            <p id="uv-index">UV Index</p>
-          </div>
-          <div class="two columns weather card" id="date-plus-five">
+           </div>
+           <div class="two columns weather card" id="date-plus-five">
             <h5>Date</h5>
             <p id="temp">Temp</p>
             <p id="wind">Wind</p>
             <p id="humid">Humidity</p>
-            <p id="uv-index">UV Index</p>
           </div>
+        </div>
         </div>
       </div>
     </div>

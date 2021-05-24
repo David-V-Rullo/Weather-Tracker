@@ -429,8 +429,8 @@ th {
 
 .weather-details {
   border: 2px solid black;
-  padding:20px;
-  margin-left:50px;
+  /* padding:20px; */
+  /* margin-left:50px; */
   background-color: #ccc;
   color:black
   }
@@ -439,8 +439,8 @@ th {
   margin-left: 10px;
   margin-right: 10px;
   padding:10px;
-  justify-content: right;
-  display: block;
+  /* justify-content: right; */
+  display:inline-block;
   position:static
 }
 .weather.card h5 {
@@ -457,9 +457,9 @@ th {
 }
 
 #search-fields {
-  margin-right:90px;
+  margin-right:90px; 
   padding-top: 80px;
-  padding-left:20px;
+  padding-left:20px; 
   color:white;
 }
 #city-search {
@@ -467,6 +467,13 @@ th {
 }
 #search-submit {
   background-color: greenyellow;
+  width:180px;
+  text-align: center;
+}
+#clear-history {
+  background-color: orange;
+  width: 180px;
+  text-align: center;
 }
 .success {
   color:white;
@@ -494,11 +501,12 @@ th {
   background-color: grey;
   color:white;
   text-align: center;
-  width: fit-content;
   margin: auto
 }
 #history {
   list-style: none;
+  height:400px;
+  margin-right:30px
 }
 #current-icon {
   background-color: darkgray;
@@ -506,3 +514,31 @@ th {
   float:right;
   margin-right: 20px;
   }
+  #five-day-header {
+    color:white;
+    padding:10px;
+    margin:20px;
+    text-align: center;
+  }
+ .jumbotron {
+  background-image: url("/assets/images/bannerimage.jpg");
+  height:80%;
+  /* width:80%; */
+  /* position:relative; */
+  justify-content: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size:cover;
+  margin-bottom: 20px;
+  text-align: center;
+  color:white;
+  display:flex;
+  align-items: flex-start;
+}
+.hero-heading {
+  text-align: center;
+  text-shadow: 2px 2px 5px black;
+}
+input:hover {
+  cursor:pointer;
+}
